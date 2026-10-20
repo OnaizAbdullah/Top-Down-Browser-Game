@@ -1,0 +1,235 @@
+:root{
+    background-color: white;
+    font-size: 16px;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2em;
+    gap: 2em;
+    color: black;
+    align-items: flex-start
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    width: 14em;
+    margin-top: 2em;
+}
+
+aside > section{
+    width: 100%;
+    border: 0.2em solid black;
+    border-radius: 0.6em;
+    box-sizing: border-box;
+    box-shadow: 0 0.2em rgba(0, 0, 0, 0.2);
+    background-color: lightcyan;
+    color: black;
+    padding: 1em;
+    margin-top: 1em;
+    
+}
+
+aside > section > h3{
+    margin-top: 0;
+    margin-bottom: 0.3em;
+    padding: 0.3em;
+    border: 0.15em dotted black;
+    background-color: cyan;
+    text-align: center;
+    font-size: 1.2em;
+    text-align: center;
+}
+aside > p{
+    margin: 0.25em 0;
+    text-align: center;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+main > section{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 0.2em solid white;
+}
+main > section > h4, main > section > p{
+    font-size: 1.5em;
+    margin: 0.2em 0;
+    color: black;
+}
+
+main > section + section{
+    position: relative;
+    width: 56.25em;
+}
+
+canvas{
+    display: block;
+    background-color: black;
+    border: 0.3em solid black;
+}
+
+canvas + section{
+    position: absolute;
+    border: 0.2em solid black;
+    box-sizing: border-box;
+    background-color: rgba(6, 64, 86, 0.9);
+    text-align: center;
+    padding: 1.5em;
+    top: 50%;
+    left: 50%;
+    width: 20em;
+    height: 16em;
+    margin-top: -8em;
+    margin-left: -10em;
+}
+canvas + section > h2{
+    position: static;
+    background-color: lightcyan;
+    color: black;
+    margin: 0 0 1em 0;
+    font-size: 1.4em;
+}
+
+#pause{
+    display: none;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    width: 10em;
+    height: 5em;
+    margin-top: -1.5em;
+    margin-left: -5em;    
+    font-weight: 700;
+    font-size: 3em;
+}
+button{
+    display: block;
+    width: 100%;
+    border: 0.1em dashed black;
+    margin: 0.63em 0;
+    padding: 0.63em;
+    background-color: lightcyan;
+    color: black;
+}
+
+button:hover{
+    background-color:blue;
+    color: white;
+}
+
+main > section + section + section{
+    width: 100%;
+    text-align: center;
+    padding-top: 1em;
+}
+main > section + section + section > p{
+    margin: 0.2em 0;
+}
+#start{
+    border: 0.2em dashed black;
+    margin: 0.4em 0;
+    padding: 0.5em;
+    font-size: 1em;
+    gap: 0.2em;
+}
+
+#cheat, #double_points{
+    display: none;
+    border: 0.2em dashed black;
+    margin: 0.4em 0;
+    padding: 0.5em;
+    font-size: 1em;
+    gap: 0.2em;
+    min-height: 1.2em;
+}
+
+h2{
+    position: absolute;
+    bottom: 95%;
+    left: 30%;
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 0.2em solid #0e0e0e;
+    color: white;
+}
+
+#end_score{
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    width: 20%;
+    margin-top: -1.5em;
+    margin-left: -2.5em;  
+    color: darkcyan;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+#outcome, #restart{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10em;
+    height: 4em;
+    margin-top: -3.5em;
+    margin-left: -5.5em; 
+    padding: 1em;
+    text-align: center;
+    color: red;
+    border: 0.2em solid darkred;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 0.3em;
+    text-align: center;
+    font-size: 2em; 
+    font-weight: 700;
+}
+
+#outcome{
+    display: none;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    width: 12em;
+    margin-left: -7em;
+    margin-top: -4.5em;
+    border: 0.2em solid lightslategray;
+    border-radius: 0.4em;
+    color: black;
+    background-color: rgba(40, 121, 137, 0.7);
+    padding: 1.8em;
+    font-size: 2em;
+    text-align: center;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1em;
+    gap: 1em;
+}
+
+nav a{
+    border: 0.1em dashed black;
+    background-color: lightcyan;
+    color: black;
+    border-radius: 1em;
+    padding: 1.5em;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover{
+    background-color: blue;
+    color: white;
+}

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<header>
+    <h1> Leaderboard</h1>
+</header>
+<main>
+    <form action="" method="POST" novalidate>
+        {{ form.hidden_tag() }}
+
+        {{form.difficulty.label}}
+        {{form.difficulty()}}
+        <br />
+        {% for error in form.difficulty.errors %}
+        {{ error }}
+        {% endfor %}
+        <br />
+        {{form.submit()}}
+    </form>
+    {% if user_scores is not none %}
+    {% if user_scores %}
+    <p>This goes without saying, but this leaderboard does not scores that are 150 because 150 points means you finished
+        the game.</p>
+    <p>You can see who has finished the game by <a href="{{url_for('finished_game')}}">clicking here!</a></p>
+    <table>
+
+        <tr>
+            <th scope="col">Rank</th>
+            <th scope="col">Users</th>
+            <th scope="col">Score</th>
+        </tr>
+        <tr>
+            {% for user_score in user_scores %}
+        <tr>
+            <td>{{user_score["rank"]}}</td>
+            <td>{{user_score["user_id"]}}</td>
+            <td>{{user_score["score"]}}</td>
+        </tr>
+        {% endfor %}
+        </tr>
+    </table>
+    {% else %}
+    <p>No one is on this leaderboard yet</p>
+    <p>You can see who has finished the game by <a href="{{url_for('finished_game')}}">clicking here!</a></p>
+    {% endif %}
+    {% endif %}
+</main>
+
+<nav>
+    <a href="{{url_for('index')}}">Homepage</a>
+</nav>
+{% endblock %}

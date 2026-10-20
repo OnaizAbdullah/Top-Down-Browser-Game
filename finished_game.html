@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<section class="layout">
+    <header>
+        <h1> Users who finished the game</h1>
+    </header>
+
+    {% if elite_people %}
+    <table>
+        <tr>
+            <th scope="col">Usernames</th>
+            <th scope="col">Difficulty finished</th>
+        </tr>
+
+        {% for user in elite_people %}
+        <tr>
+            <td>{{user["user_id"]}}</td>
+            <td>{{user["difficulty"]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>No one has finished this game yet</p>
+
+    {% endif %}
+
+    <nav>
+        <a href="{{url_for('index')}}">Homepage</a>
+    </nav>
+
+    {% endblock %}
+</section>

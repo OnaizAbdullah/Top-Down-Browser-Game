@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Orb Collector</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='Orb_Collector.css')}}" />
+    <script src="{{url_for('static',filename='Orb_Collector.js')}}" type="module"></script>
+</head>
+
+<body>
+    <aside>
+        <p id="start"></p>
+        <p id="double_points"></p>
+        <p id="cheat"></p>
+        <section>
+            <h3> Keyboard Shortcuts/ Notes</h3>
+            <p> P: Pause/Unpause</p>
+            <p> N: New Level</p>
+            <p> R: Restart </p>
+            <p> M: Mute/Unmute Music</p>
+            <p> E: Mute/Unmute Sound Effects</p>
+            <p><strong>wait until clapping finishes to press N</strong></p>
+            <p>If you lose or win, <strong>wait until end audio finishes to press R</strong></p>
+        </section>
+    </aside>
+    <main>
+        <section>
+            <h4></h4>
+            <p id="score"></p>
+        </section>
+        <section>
+            <canvas width="900" height="600"></canvas>
+            <!-- https://www.w3schools.com/jsref/event_onclick.asp - Used to learn about onclick-->
+            <section>
+                <h2>Select Difficulty</h2>
+                <button>Easy</button>
+                <button>Medium</button>
+                <button>Hard</button>
+            </section>
+            <p id="pause"></p>
+            <p id="restart"></p>
+            <p id="outcome"></p>
+            <p id="end_score"></p>
+        </section>
+    </main>
+    <nav>
+        <a href="{{url_for('finished_game')}}">People who have finished game</a>
+        <a href="{{url_for('leaderboard')}}">View Leaderboard</a>
+        <a href="{{url_for('index')}}">Homepage</a>
+    </nav>
+</body>
+
+</html>

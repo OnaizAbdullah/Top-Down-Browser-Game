@@ -1,0 +1,164 @@
+:root{
+    font-size: 16px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+h1{
+    text-align: center;
+    margin-bottom: 1.1em;
+    width: 100%;
+    padding: 0.3em;
+    border: 0.2em dotted black;
+    border-radius: 0.7em;
+    box-sizing: border-box;
+    background-color: cyan;
+}
+
+.layout{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0.25em solid black;
+    width: 60%;
+    border-radius: 0.6em;
+    padding: 2em;
+    box-shadow: 0 0.2em rgba(0,0,0,0.2);
+}
+
+table{
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+
+}
+
+th, td{
+    border: 1px solid black;
+
+}
+
+main > h2{
+    text-align: center;
+    margin-bottom: 1.25em;
+    border: 0.2em dotted black;
+    border-radius: 0.3em;
+    background-color: cyan;
+}
+
+h2 + section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1.25em;
+    gap: 1.25em;
+}
+
+section > section{
+    background-color: lightskyblue;
+    padding: 0.95em;
+    border-radius: 0.65em;
+}
+
+.starting{
+    margin-top: 3em;
+    padding: 2em;
+    border: 0.2em solid black;
+    border-radius: 0.8em;
+    box-shadow: 0 0.3em rgba(0,0,0,0.2);
+    width: 90%;
+
+}
+.starting > h2{
+    text-align: center;
+    padding: 0.4em;
+    border: 0.15em dotted black;
+    border-radius: 0.5em;
+    background-color: cyan;
+}
+
+.starting > p{
+    text-align: center;
+}
+.starting a{
+    font-weight: 700;
+    color: #0077cc;
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    gap: 1em;
+    padding: 1em;
+}
+
+section > nav{
+    display: flex;
+    flex-direction: column;
+}
+
+main + nav{
+    display: flex;
+    flex-direction: column;
+}
+nav a{
+    border: 0.1em dashed black;
+    background-color: lightcyan;
+    color: black;
+    border-radius: 1em;
+    padding: 1.5em;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover{
+    background-color: blue;
+    color: white;
+}
+
+h1 + nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+}
+nav + nav + nav > a, h1 + nav a{
+    padding: 0.7em 1.5em;
+    border: 0.15em solid black;
+    border-radius: 1.5em;
+    font-weight: 700;
+    background-color: lightskyblue;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    gap: 0.8em;
+    border: 0.15em solid #00cccc;
+    border-radius: 0.5em;
+    background-color: #e0f7f7;
+}
+form input[type="submit"]{
+    background-color: #00cccc;
+    font-weight: 700;
+
+}
+form input[type="submit"]:hover{
+    background-color: #009999;
+    color: white;
+}
+p{
+    text-align: justify;
+}

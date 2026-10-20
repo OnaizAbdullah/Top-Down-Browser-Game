@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block main_content %}
+<header>
+    <h1> Game Guide </h1>
+
+</header>
+
+<main>
+    <h2> How to Play </h2>
+    <section>
+        <section>
+            <h3> Overview of Game </h3>
+            <p><i>Orb Collector</i> is a very fun but challenging game to complete; The <i>player</i> is a <i>cell</i>
+                and
+                must eat (collect) all the orbs while avoiding infection by any of the <i>enemies (virions)</i>.
+                Depending on selected mode, a new <i>virion</i> will appear on the screen after a certain amount of orbs
+                are
+                consumed.
+                After every orb consumed, the <i>cell</i> will grow in size making the game become gradually harder as
+                the
+                game goes on.
+                There are also <i>shields</i> in the game.
+                If you consume a <i>shield</i>, you are immune to <b><i>enemies</i> only</b> for about <em>six</em>
+                seconds... so plan well!</p>
+            <p>Feel free to <em>pause</em> the game at any time by pressing "p" on your keyboard.
+                To <em>unpause</em>, simply press "p" again.
+                <b>Eat 150 orbs to finish the game!</b>
+            </p>
+
+        </section>
+        <section>
+            <h3> Levels </h3>
+            <p>There are <em>three</em> levels to this game.
+                To <em>finish</em> a level, you must eat 50 orbs.
+                The <i>cell</i> and the virions both <em>increase</em> their speed after every new level.
+                This leads the game to become gradually <em>harder</em> after every level.
+                If you manage to finish all <em>three</em> levels of the game, you will be put on an elite leader-board
+                where other people can see what difficulty you completed the game at. </p>
+        </section>
+        <section>
+            <h3> Modes </h3>
+            <p>This game consists of <em>three</em> modes:</p>
+            <ul>
+                <li>
+                    <b>Easy</b>
+                    <ol>
+                        <li><i>Enemies</i> will spawn after every <em>five</em> orbs consumed.</li>
+                        <li><i>Users</i> are <em>allowed</em> to touch the border.</li>
+                    </ol>
+                </li>
+                <li>
+                    <b>Medium</b>
+                    <ol>
+                        <li><i>Enemies</i> will spawn after every <em>seven</em> orbs consumed.</li>
+                        <li><i>Users</i> are <em>allowed</em> to touch the border.</li>
+                    </ol>
+                </li>
+                <li>
+                    <b>Hard</b>
+                    <ol>
+                        <li><i>Enemies</i> will spawn after every <em>ten</em> orbs consumed.</li>
+                        <li><i>Users</i> will <em>die</em> if they touch the border.</li>
+                    </ol>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h3> Cheats </h3>
+            <p>Some might find this game <em>hard</em> to complete or may not have the time to play through all of it
+                without help.</p>
+            <p><em>Fortunately</em>, for those people, there are some cheat codes in the game which makes it way
+                <em>easier</em> to finish (shh don't tell people you used the cheats):
+            </p>
+            <ul>
+                <li>
+                    <p><b>Fixed Size Cheat (Pressing "K")</b> - makes the <i>cell</i> stay a fixed size for the
+                        <em>whole</em> game.
+                        It can be toggled on/off at any point during the game.
+                    </p>
+                </li>
+                <li>
+                    <p><b>Double Points Cheat (Pressing "T")</b> - Enables each orb to be worth <em>two</em> points.
+                        <strong>Note: This cheat can only be enabled at the <em>start</em> of a level of the
+                            game.</strong>
+                    </p>
+                </li>
+            </ul>
+        </section>
+    </section>
+</main>
+<nav>
+    <a href="{{url_for('Orb_Collector')}}">Play The Game!</a>
+    <a href="{{url_for('index')}}">Homepage</a>
+</nav>
+{% endblock %}

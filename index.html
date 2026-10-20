@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<section class="layout">
+    <h1>Welcome</h1>
+
+    <nav>
+        {% if not g.user %}
+
+        <a href="{{url_for('register')}}">Register</a>
+        <a href="{{url_for('login')}}">Login</a></p>
+
+        {% endif %}
+    </nav>
+    <nav>
+        <a href="{{url_for('leaderboard')}}">Leaderboard</a>
+        <a href="{{url_for('finished_game')}}">Users who completed Game</a>
+        <a href="{{url_for('information')}}">Game Information</a>
+        <a href="{{url_for('Orb_Collector')}}">Play the Game!</a>
+    </nav>
+
+    <nav>
+        {% if g.user %}
+        <a href="{{url_for('logout')}}">Logout</a>
+        {% endif %}
+    </nav>
+    {% endblock %}
+</section>
